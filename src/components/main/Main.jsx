@@ -4,9 +4,10 @@ import "./Main.css";
 import { Context } from "../../context/Context";
 
 function Main() {
-  const { onSent, recentPrompt, showResult, loading, resultData, setInput, input } = useContext(Context);
+  const { onSent, recentPrompt, showResult, loading, resultData, setInput, input,setIsFromCard } = useContext(Context);
 
   const handleCardClick = (cardPrompt) => {
+    setIsFromCard(true);
     setInput(cardPrompt);  
   };
   

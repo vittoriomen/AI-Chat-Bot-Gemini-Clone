@@ -11,6 +11,7 @@ const ContextProvider = (props) => {
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [resultData, setResultData] = useState("");
+  const [isFromCard, setIsFromCard] = useState(false);
 
   const newChat = () => {
     setLoading(false);
@@ -18,6 +19,7 @@ const ContextProvider = (props) => {
     setResultData("");
     setRecentPrompt(null); //Reset recent prompt so the sidebar can load it again
     setInput(""); //Also clear input field
+    setIsFromCard(false); //Reset card flag when starting new chat
   };
   
 
@@ -73,6 +75,7 @@ const ContextProvider = (props) => {
   
     setLoading(false);
     setInput("");
+    setIsFromCard(false); //Reset flag after sending
   }, [
     input,
     setRecentPrompt,
@@ -86,12 +89,12 @@ const ContextProvider = (props) => {
   ]);
    
 
-  // Auto-send when input changes (after clicking a card)
+  // Auto-send only if input comes from a card click
   useEffect(() => {
-    if (input.trim() !== "" && input !== recentPrompt) {
-      onSent();  
+    if (isFromCard && input.trim() !== "" && input !== recentPrompt) {
+      onSent();
     }
-  }, [input, onSent, recentPrompt]); 
+  }, [input, onSent, recentPrompt, isFromCard]);
 
   const contextValue = {
     prevPrompts,
@@ -110,6 +113,7 @@ const ContextProvider = (props) => {
     input,  
     setInput,
     newChat,
+    setIsFromCard,
 };
 
 
