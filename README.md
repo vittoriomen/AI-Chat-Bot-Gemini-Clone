@@ -1,8 +1,21 @@
-# React + Vite
+# Gemini AI Chatbot Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive AI chatbot** inspired by Google's Gemini AI, built using React.js, HTML, and CSS. This chatbot can answer prompts dynamically using the Gemini API, featuring a sleek UI and a smooth typing effect.
 
-Currently, two official plugins are available:
+## 🌟 Features:
+✅ **Live AI Responses** – Uses the **Gemini API** to generate real-time answers.  
+✅ **Auto-Send for Quick Prompts** – Click a pre-defined question card to instantly get an AI-generated response.  
+✅ **Manual Input & Send Button** – Users can type their own prompts and send them manually.  
+✅ **Typing Effect Animation** – AI responses appear with a smooth, word-by-word animation.  
+✅ **Recent Prompt History** – Saves previous prompts for easy reference.  
+✅ **New Chat Feature** – Start a fresh conversation anytime.  
+✅ ** Modern UI** – Simple and user-friendly interface.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Built With
+- **React.js** – Frontend framework
+- **CSS & HTML** – Styling & structure
+- **Google Gemini API** – AI-powered responses
+- **Vite** – React project setup 
+- **Vercel** for hosting
+
+
