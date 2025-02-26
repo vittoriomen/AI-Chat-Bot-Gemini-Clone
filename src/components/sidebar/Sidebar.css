@@ -7,20 +7,28 @@
   padding: 25px 15px;
 }
 
+/* Icona menu per dispositivi mobili */
+.menu-icon {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 60px;
+  left: 15px;
+  z-index: 2000;
+}
 
-
-.sidebar img{
+.sidebar img {
   width: 20px;
 }
 
-
-.sidebar .menu{
+.sidebar .menu {
   display: block;
   margin-left: 10px;
   cursor: pointer;
 }
 
-.sidebar .new-chat{
+.sidebar .new-chat {
   margin-top: 50px;
   display: inline-flex;
   align-items: center;
@@ -33,18 +41,18 @@
   cursor: pointer;
 }
 
-.sidebar .recent{
+.sidebar .recent {
   display: flex;
   flex-direction: column;
   animation: fadeIn 1.5s;
 }
 
-.sidebar .recent-title{
+.sidebar .recent-title {
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
-.sidebar .recent-entry{
+.sidebar .recent-entry {
   display: flex;
   align-items: start;
   gap: 10px;
@@ -55,31 +63,45 @@
   cursor: pointer;
 }
 
-.sidebar .recent-entry:hover{
+.sidebar .recent-entry:hover {
   background-color: #e2e6eb;
 }
 
-.sidebar .bottom{
+.sidebar .bottom {
   display: flex;
   flex-direction: column;
 }
 
-
-.sidebar .bottom-item{
+.sidebar .bottom-item {
   padding-right: 10px;
   cursor: pointer;
-
 }
 
+/*MEDIA QUERY per MOBILE */
+@media (max-width: 600px) {
+  /* Mostra il pulsante del menu */
+  .menu-icon {
+    display: block;
+  }
 
-@media(max-width:600px){
+  /* La sidebar viene nascosta fuori dallo schermo */
+  .sidebar {
+    position: fixed;
+    left: -250px; /* La sidebar inizia nascosta */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #f0f4f9;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 15px;
+  }
 
-  .sidebar{
-    display: none;
+  /* Quando la classe "open" è aggiunta, la sidebar appare */
+  .sidebar.open {
+    left: 0;
   }
 }
-
-
-
-
-

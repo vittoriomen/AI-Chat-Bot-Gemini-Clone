@@ -71,7 +71,8 @@ function Main() {
         <div className="main-bottom">
           <div className="search-box">
             <input 
-              onChange={(e) => setInput(e.target.value)} 
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && onSent()} 
               value={input} 
               type="text" 
               placeholder="Enter a prompt here" 
