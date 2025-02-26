@@ -9,7 +9,10 @@ A fully responsive AI chatbot** inspired by Google's Gemini AI, built using Reac
 ✅ **Typing Effect Animation** – AI responses appear with a smooth, word-by-word animation.  
 ✅ **Recent Prompt History** – Saves previous prompts for easy reference.  
 ✅ **New Chat Feature** – Start a fresh conversation anytime.  
-✅ ** Modern UI** – Simple and user-friendly interface.  
+✅ ** Modern UI** – Simple and user-friendly interface. 
+
+## 🚀 Live Demo:
+👉 https://ai-chat-bot-gemini-clone.vercel.app/
 
 ## 🛠️ Built With
 - **React.js** – Frontend framework
